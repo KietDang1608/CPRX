@@ -1,0 +1,24 @@
+# 🛑 Loại bỏ thư mục sinh ra tự động (Không cần push lên Git)
+Library/
+Temp/
+Logs/
+UserSettings/
+MemoryCaptures/
+
+# 🛑 Không cần thiết vì Unity có thể tự tạo lại
+Packages/
+ProjectSettings/
+Obj/
+Build/
+Builds/
+Assets/StreamingAssets/
+
+# 🛑 Ignore cache, metadata, file tạm thời
+*.suo
+*.tmp
+*.svd
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
