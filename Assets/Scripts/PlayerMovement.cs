@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,14 +14,25 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    Vector3 velocity;
+    private Vector3 velocity;
+    private bool isGrounded;
 
-    bool isGrounded;
+    private Vector3 spawnPoint; // Lưu vị trí xuất phát
+    public float fallThreshold = -10f; // Giới hạn rơi
 
-    // Update is called once per frame
+    void Start()
+    {
+        spawnPoint = transform.position; // Lưu điểm xuất phát
+    }
+
     void Update()
     {
-        //checking if we hit the ground to reset our falling velocity, otherwise we will fall faster the next time
+        // Kiểm tra nếu rơi khỏi địa hình
+        if (transform.position.y < fallThreshold)
+        {
+            ResetPlayerPosition();
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -32,20 +43,29 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        //right is the red Axis, foward is the blue axis
         Vector3 move = transform.right * x + transform.forward * z;
-
         controller.Move(move * speed * Time.deltaTime);
 
-        //check if the player is on the ground so he can jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //the equation for jumping
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
-
         controller.Move(velocity * Time.deltaTime);
     }
+
+    void ResetPlayerPosition()
+    {
+        controller.enabled = false; // Tắt CharacterController để reset vị trí
+        transform.position = spawnPoint; // Đưa player về vị trí xuất phát
+        velocity = Vector3.zero; // Dừng chuyển động rơi
+        controller.enabled = true; // Bật lại CharacterController
+    }
+
+    public void SetCheckpoint(Vector3 newCheckpoint)
+    {
+        spawnPoint = newCheckpoint;
+    }
+
 }
