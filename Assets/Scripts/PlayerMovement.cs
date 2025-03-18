@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void ResetPlayerPosition()
+    public void ResetPlayerPosition()
     {
         controller.enabled = false; // Tắt CharacterController để reset vị trí
         transform.position = spawnPoint; // Đưa player về vị trí xuất phát
