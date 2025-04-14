@@ -1,14 +1,7 @@
 fileFormatVersion: 2
-guid: 6a3c3c37133b6ae4d9590995c8166d88
+guid: 78c7aac1d08ea9e47b50b222a4a2955f
 PrefabImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 288942
-  packageName: Lowpoly Magician
-  packageVersion: 1.0
-  assetPath: Assets/Magician_RIO/Prefab/Magician_RIO.prefab
-  uploadId: 674512
