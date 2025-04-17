@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/desert.unity
+    guid: bd5fd9a863ba3eb47a07e685d23cb1f3
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7e4b7a87926e5a148ac9b6f002d27240
+  - enabled: 1
+    path: Assets/Scenes/DarkForest.unity
+    guid: 58cfad811d52c3945a22f32125d5d97f
+  - enabled: 1
+    path: Assets/Scenes/CuaDat.unity
+    guid: 56246f4a8cd4edd4daba44d680abb262
+  - enabled: 1
+    path: Assets/Scenes/huu/CuaHuu.unity
+    guid: 5ec609e2db894aa44847a1ce575455f3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
