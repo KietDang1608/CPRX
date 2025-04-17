@@ -3,11 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void BackToMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void Map2()
+    {
+        SceneManager.LoadScene("Map2");
+    }
 
-    
+    public void Map3()
+    {
+        SceneManager.LoadScene("Map3");
+    }
 }
