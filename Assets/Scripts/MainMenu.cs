@@ -11,17 +11,18 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         Debug.Log("quitting");
+        SceneManager.LoadScene("MainMenu");
         Application.Quit();
     }
 
     public void Map2()
     {
-        SceneManager.LoadScene("Map2");
+        SceneManager.LoadScene("DarkForest");
     }
 
     public void Map3()
     {
-        SceneManager.LoadScene("Map3");
+        SceneManager.LoadScene("desert");
     }
 
 }
