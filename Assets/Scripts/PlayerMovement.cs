@@ -19,10 +19,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 spawnPoint; // Lưu vị trí xuất phát
     public float fallThreshold = -10f; // Giới hạn rơi
+    private PlayerJumpSound jumpSoundScript;
+    public Animator animator;
+    private bool isJumping = false;
 
     void Start()
     {
         spawnPoint = transform.position; // Lưu điểm xuất phát
+        jumpSoundScript = GetComponent<PlayerJumpSound>(); // Gán script phát âm thanh
     }
 
     void Update()
@@ -45,10 +49,18 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
+        animator.SetFloat("Speed", move.magnitude);
+
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (jumpSoundScript != null)
+            {
+                jumpSoundScript.PlayJumpSound();
+            }
+            animator.SetBool("IsJumping", true);
+            isJumping = true;
         }
 
         velocity.y += gravity * Time.deltaTime;
