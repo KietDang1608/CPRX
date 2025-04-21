@@ -14,6 +14,14 @@ public class PlayerMovementNew : MonoBehaviour
 
     private PlayerJumpSound jumpSoundScript;
 
+    public Transform playerCamera; // Thêm một tham chiếu tới Camera
+    public float lookSpeedX = 2f;  // Tốc độ xoay theo trục X
+    public float lookSpeedY = 2f;  // Tốc độ xoay theo trục Y
+    public float upperLimit = 80f;  // Giới hạn góc nhìn trên
+    public float lowerLimit = 80f;  // Giới hạn góc nhìn dưới
+
+    private float rotationX = 0f;  // Góc xoay trục X
+
 
     private void Awake()
     {
@@ -31,7 +39,8 @@ public class PlayerMovementNew : MonoBehaviour
 
         animator.SetFloat("Speed", moveInput.magnitude);
 
-        
+        RotateCamera();
+
         if (Keyboard.current.spaceKey.wasPressedThisFrame && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -70,6 +79,13 @@ public class PlayerMovementNew : MonoBehaviour
     {
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
         rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime);
+
+        Vector3 flatForward = new Vector3(transform.forward.x, 0, transform.forward.z).normalized;
+        if (flatForward.magnitude > 0.1f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(flatForward);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 700f * Time.fixedDeltaTime); // Tốc độ quay có thể điều chỉnh
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -84,6 +100,21 @@ public class PlayerMovementNew : MonoBehaviour
             animator.SetBool("IsJump", false);
             isJumping = false;
         }
+    }
+
+    void RotateCamera()
+    {
+        float mouseX = Mouse.current.delta.x.ReadValue() * lookSpeedX;
+        float mouseY = Mouse.current.delta.y.ReadValue() * lookSpeedY;
+
+        rotationX -= mouseY;
+        rotationX = Mathf.Clamp(rotationX, -upperLimit, lowerLimit);
+
+        // Xoay camera theo trục Y (xoay trái phải)
+        playerCamera.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
+
+        // Xoay nhân vật theo trục Y (xoay trái phải)
+        transform.Rotate(Vector3.up * mouseX);
     }
 
 }

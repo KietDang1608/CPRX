@@ -14,6 +14,10 @@ public class InGameMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void NewGame()
+    {
+        SceneManager.LoadScene("CuaDat");
+    }
     public void Map2()
     {
         SceneManager.LoadScene("DarkForest");
@@ -22,5 +26,9 @@ public class InGameMenu : MonoBehaviour
     public void Map3()
     {
         SceneManager.LoadScene("desert");
+    }
+    public void Map4()
+    {
+        SceneManager.LoadScene("CuaHuu");
     }
 }
