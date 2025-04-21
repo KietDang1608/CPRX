@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player; 
-    public Vector3 offset;   
+    public Transform target;
+    public Vector3 offset = new Vector3(0, 2, -5);
+    public float followSpeed = 10f;
 
-    private void LateUpdate()
+    void LateUpdate()
     {
-        transform.position = player.position + offset;
+        Vector3 desiredPosition = target.position + target.rotation * offset;
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+        transform.LookAt(target);
     }
 }
+
