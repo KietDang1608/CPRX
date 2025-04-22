@@ -23,6 +23,7 @@ public class FinishTrigger : MonoBehaviour
             }
 
             // Chuyển cảnh về menu, hoặc hiện UI thắng
+
             SceneManager.LoadScene("MainMenu"); // hoặc hiện popup trước rồi load
         }
     }
