@@ -34,4 +34,16 @@ public class GameTimer : MonoBehaviour
         isRunning = false;
         return timer;
     }
+
+    //void Awake()
+    //{
+    //    // Tự huỷ nếu đã tồn tại một GameTimer khác (tránh trùng nếu dùng DontDestroy)
+    //    if (FindObjectsByType<GameTimer>(FindObjectsSortMode.None).Length > 1)
+    //    {
+    //        Destroy(gameObject);
+    //        return;
+    //    }
+    //    DontDestroyOnLoad(gameObject);
+    //}
+
 }

@@ -10,9 +10,13 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("CuaDat");
     }
-        
+
     void Start()
     {
+        // Unlock chu?t và hi?n l?i khi quay v? MainMenu
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         float bestTime = PlayerPrefs.GetFloat("BestTimeOverall", -1f);
         if (bestTime >= 0f)
         {
@@ -25,6 +29,7 @@ public class MainMenu : MonoBehaviour
             bestTimeText.text = "Best Time: --:--";
         }
     }
+
 
 
     public void ExitGame()
