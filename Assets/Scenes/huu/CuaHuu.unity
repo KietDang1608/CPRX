@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 148867479}
   m_Layer: 3
   m_Name: Cube (2)
-  m_TagString: ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1025,7 +1025,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1104,6 +1104,7 @@ GameObject:
   - component: {fileID: 321675155}
   - component: {fileID: 321675154}
   - component: {fileID: 321675153}
+  - component: {fileID: 321675157}
   m_Layer: 4
   m_Name: river1
   m_TagString: Water
@@ -1195,6 +1196,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &321675157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321675152}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 50, y: 0.99555105, z: 50}
+  m_Center: {x: 0, y: 0.00030007958, z: 0}
 --- !u!1 &322336981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1232,7 @@ GameObject:
   - component: {fileID: 322336982}
   m_Layer: 3
   m_Name: Cube (6)
-  m_TagString: ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1273,7 +1295,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1612,7 +1634,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2.5
+  m_Height: 2.2
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 0.7
@@ -1881,7 +1903,7 @@ GameObject:
   - component: {fileID: 545730098}
   m_Layer: 3
   m_Name: Cube (3)
-  m_TagString: ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1944,7 +1966,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2136,7 +2158,7 @@ GameObject:
   - component: {fileID: 795169010}
   m_Layer: 3
   m_Name: Cube (1)
-  m_TagString: ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2185,7 +2207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2770,6 +2792,7 @@ GameObject:
   - component: {fileID: 923468877}
   - component: {fileID: 923468876}
   - component: {fileID: 923468875}
+  - component: {fileID: 923468879}
   m_Layer: 4
   m_Name: river1 (1)
   m_TagString: Water
@@ -2861,6 +2884,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &923468879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923468874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 50, y: 0.98764753, z: 50}
+  m_Center: {x: 0, y: -0.005503908, z: 0}
 --- !u!1 &926622361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3046,7 @@ GameObject:
   - component: {fileID: 1034324824}
   - component: {fileID: 1034324823}
   - component: {fileID: 1034324822}
+  - component: {fileID: 1034324826}
   m_Layer: 4
   m_Name: river1 (2)
   m_TagString: Water
@@ -3093,6 +3138,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1034324826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034324821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 50, y: 0.98764753, z: 50}
+  m_Center: {x: 0, y: -0.005503908, z: 0}
 --- !u!1 &1046952287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,7 +3510,7 @@ Transform:
   m_GameObject: {fileID: 1183028683}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 0.029, z: 0.24}
+  m_LocalPosition: {x: 0.002, y: -0.067, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3572,7 +3638,7 @@ GameObject:
   - component: {fileID: 1429264072}
   m_Layer: 3
   m_Name: Cube (5)
-  m_TagString: ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3589,8 +3655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee14a9c80f3f4a4bb384c701d9e7e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  distance: 5
+  speed: 2
+  distance: 7
 --- !u!65 &1429264073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3635,7 +3701,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3674,7 +3740,7 @@ Transform:
   m_GameObject: {fileID: 1429264071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.90201557, z: -0, w: 0.43170363}
-  m_LocalPosition: {x: 24.84, y: 15.17, z: 14.88}
+  m_LocalPosition: {x: 30.4, y: 15.17, z: 14.88}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3692,6 +3758,7 @@ GameObject:
   - component: {fileID: 1445260168}
   - component: {fileID: 1445260167}
   - component: {fileID: 1445260166}
+  - component: {fileID: 1445260170}
   m_Layer: 4
   m_Name: river1 (3)
   m_TagString: Water
@@ -3783,6 +3850,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1445260170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445260165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 50, y: 0.98764753, z: 50}
+  m_Center: {x: 0, y: -0.005503908, z: 0}
 --- !u!1 &1459932462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,7 +4378,7 @@ Transform:
   m_GameObject: {fileID: 1749936998}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7962453, z: -0, w: -0.60497403}
-  m_LocalPosition: {x: -20.32, y: 12.45, z: -7.58}
+  m_LocalPosition: {x: -18.48, y: 11.19, z: -6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4581,7 +4669,7 @@ GameObject:
   - component: {fileID: 1854750755}
   m_Layer: 3
   m_Name: Cube (4)
-  m_TagString: ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4644,7 +4732,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4753,7 +4841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee8af93f6543af1418cb59d1c38e78be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
